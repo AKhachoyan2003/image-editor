@@ -35,7 +35,7 @@ const ButtonWithMenu = ({
   const buttonSize = 'sm';
 
   const filteredMenuItems = menuItems.filter(Boolean);
-  const hasMultipleMenuItems = filteredMenuItems.length > 1;
+  const hasMultipleMenuItems = filteredMenuItems.length > 0;
 
   const openMenu = (e) => {
     if (isMounted.current) {
