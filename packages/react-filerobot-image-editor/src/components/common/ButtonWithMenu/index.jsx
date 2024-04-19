@@ -35,7 +35,7 @@ const ButtonWithMenu = ({
   const buttonSize = 'sm';
 
   const filteredMenuItems = menuItems.filter(Boolean);
-  const hasMultipleMenuItems = filteredMenuItems.length > 0;
+  const hasMultipleMenuItems = filteredMenuItems.length > 1;
 
   const openMenu = (e) => {
     if (isMounted.current) {
@@ -63,7 +63,7 @@ const ButtonWithMenu = ({
       return;
     }
 
-    if (typeof onClick === 'function') {
+    if (typeof onClick === 'function' && !filteredMenuItems[0]?.onClick) {
       onClick();
     } else if (filteredMenuItems[0]?.onClick) {
       filteredMenuItems[0].onClick();
