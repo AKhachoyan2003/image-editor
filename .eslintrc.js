@@ -38,6 +38,7 @@ module.exports = {
       2,
       { namedComponents: 'arrow-function' },
     ],
+    'prettier/prettier': 0,
   },
   settings: {
     'import/resolver': {
